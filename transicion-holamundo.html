@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+.pelota{
+  width: 100px;
+  height: 100px;
+  transition: 1s ;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.pelota.a{
+  /*border-radius: 50%;*/
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background: red;
+  left: 0;
+}
+
+.pelota.b{
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  right: 0;
+  background: blue;
+
+}
+.canasta:hover .pelota.a{
+  left: calc(50% - 100px);
+  position: absolute;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+.canasta:hover .pelota.b{
+  border-top-left-radius: 0%;
+  border-bottom-left-radius: 0%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  right: calc(50% - 100px);
+}
+.canasta{
+  width: 100%;
+  position: relative;
+  height: 100px;
+  border: 1px solid red;
+}
+  </style>
+</head>
+<body>
+  <div class="canasta">
+    <div class="pelota a">Hola</div>
+    <div class="pelota b">mundo</div>
+  </div>
+</body>
+</html>
